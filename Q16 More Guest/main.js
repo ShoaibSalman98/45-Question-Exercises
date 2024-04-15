@@ -1,18 +1,21 @@
-var guests = ["Amir", "Shoaib", "Junaid", "Jahanzaib"];
-// Guest not come.
-var notCome = guests[0];
-console.log(notCome, "will not join us");
-//Replacing a guest.
-guests.splice(0, 1, "Rashid");
+"use strict";
+console.log("GREAT NEWS ! I found a bigger table at the hotel");
+let guests = ["Amir", "Shoaib", "Junaid", "Jahanzaib"];
 //Inform all we found a bigger table and invite more frends.
-guests.forEach(function (item) { return console.log("Hello ".concat(item, ", I arranged a bigger table so i invite more frends")); });
+guests.forEach(item => console.log(`Hello ${item}, I arranged a bigger table so i invite more frends`));
 // Add one frend begging of the Array.
 guests.unshift("Faisal");
+console.log(guests);
 // Add friend in the end of the Array.
 guests.push("Nasir");
+console.log(guests);
 // Get a middle index  of the Array.
-var middleIndex = Math.floor(guests.length / 2);
+//let middleIndex : number = Math.floor(guests.length / 2);
 //Add a freind on a middle index of the Array.
-guests.splice(middleIndex, 0, "Zahid");
-console.log("UPdated List of Expected Guests");
-guests.forEach(function (item) { return console.log("Assalm o Allikum ".concat(item, ", \"Please join us for a Dinner tonight")); });
+//guests.splice(middleIndex, 0 , "Zahid");
+//console.log(guests);
+// 2nd Method to add person in middle of the arry.
+guests.splice(Math.floor(guests.length / 2), 0, "Shafqat");
+console.log(guests);
+console.log("Updated List of Expected Guests");
+guests.forEach(item => console.log(`Assalm o Allikum ${item}, "Please join us for a Dinner tonight`));
